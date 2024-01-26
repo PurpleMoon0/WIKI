@@ -1,61 +1,83 @@
 #[Info]
 site_name: PurpleMoon's Wiki
-#site_url: 
+site_url: https://purplemoon0.github.io/PM_WIKI/
 site_author: PurpleMoon
+
 #[UI]
 theme:
   name: material
   palette:
-    #primary: blue grey
+    #primary: purple
 
-    - scheme: default # 日间模式
-      primary: grey # 上方的
-      accent: cyan # 链接等可交互元件的高亮色
+    # 根据系统调节日/夜间模式
+    - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/weather-night # 图标
+        icon: material/brightness-auto
+        name: 切换至日间模式
+
+    # 日间模式
+    - media: "(prefers-color-scheme: light)" # 根据用户系统选首选项择日间模式
+      scheme: default # 日间模式
+      primary: purple # 顶栏颜色
+      accent: deep purple # 链接等可交互元件的高亮色
+      toggle:
+        icon: material/weather-sunny # 图标
         name: 切换至夜间模式 # 鼠标悬浮提示
-    - scheme: slate # 夜间模式
+
+    # 夜间模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: slate # 夜间模式
       primary: black 
       accent: cyan
       toggle:
-        icon: material/weather-sunny
-        name: 切换至日间模式
+        icon: material/weather-night
+        name: 切换至根据系统调节日/夜间模式
+
+  # 更改图标
+  logo: assets/logo.png # 网站logo（顶栏）
+  favicon: assets/logo.png # 网站图标
+
   features: 
-    - navigation.instant #- header.autohide  #自动隐藏
-    #- announce.dismiss #呈现可标记为由用户读取的临时公告，可以包含一个用于取消当前公告的按钮
+    - navigation.instant # 即时加载，所有内部链接的点击将被拦截并通过 XHR 发送
+    - navigation.instant.progress # 加载进度指示器
     - navigation.tracking #地址栏中的 URL 将自动更新为在目录中突出显示的活动锚点
     - navigation.tabs #顶级部分将呈现在上面视口标题下方的菜单层中，但在移动设备上保持原样
     #- navigation.tabs.sticky  #启用粘性选项卡后，导航选项卡将锁定在标题下方，并在向下滚动时始终保持可见
-    #- navigation.sections #启用部分后，顶级部分在边栏中呈现为1220px以上视口的组，但在移动设备上保持原样
+    #- navigation.sections #启用分区后，顶级分区将在侧边栏中呈现为组，但在移动设备上仍保持原样。
+    #- navigation.expand #左侧边栏将默认展开所有可折叠的小节，因此用户不必手动打开小节。
+    - navigation.path #激活导航路径后，痕迹导航将呈现在每个页面标题上方，这可能会使在屏幕较小的设备上访问文档的用户更容易找到方向。
+    - navigation.indexes #启用章节索引页后，文档可以直接附加到章节，这对于提供概述页面特别有用。
+    - toc.follow #启用目录的锚点跟随后，侧边栏会自动滚动，以便始终可见。
     - navigation.top # 返回顶部的按钮 在上滑时出现
-    - search.suggest # 搜索输入一些字母时推荐补全整个单词
+
+    - navigation.indexes # 自定义导航
+
+    - search.suggest # 搜索建议，搜索输入一些字母时推荐补全整个单词
     - search.highlight # 搜索出的文章关键词加入高亮
     - navigation.expand # 打开Tab时左侧目录全部展开
-    #- navigation.indexes #启用节索引页后，可以将文档直接附加到节
     - search.share #搜索分享按钮
+
+    - header.autohide # 启用自动隐藏后，当用户滚动超过特定阈值时，标题会自动隐藏，从而为内容留出更多空间
+
+    # 如果存储库 URL 指向有效的 GitHub、GitLab 或 Bitbucket 存储库，则 MkDocs 会提供一个名为 edit_uri 的设置，该设置将解析为托管文档的子文件夹。
+    # 确保配置正确后，可以添加代码操作的按钮。支持两种类型的代码操作：编辑和查看（仅限 GitHub）
+    - content.action.edit # 编辑源代码
+    - content.action.view # 查看源代码
+
   language: zh # 一些提示性的文字会变成中文
 
 
   icon: 
     repo: fontawesome/brands/github #右上角图标
-edit_uri: edit/main/docs # 编辑按钮跳转的链接 
-repo_url: https://github.com/Wcowin/mymkdocs # 右上角点击跳转的链接
-repo_name: Wcowin.github.io # 右上角的名字
+edit_uri: edit/main/docs # 编辑按钮跳转的链接
+repo_url: https://github.com/PurpleMoon0/PM_WIKI # 右上角点击跳转的链接
+repo_name: PurpleMoon0/PM_WIKI # 右上角的名字
 
 # [Navigtion]
 nav: 
-  - 博客:
-    - 好用/好玩网站分享: blog/Webplay.md
-    - What is Github: blog/Github.md
-    - 解决谷歌翻译用不了的问题: blog/googletranslate.md
-    - Mac/windows软件网站汇总: blog/macsoft.md
-    - win11资源分享: blog/win.md
-    - Telegram 群组、频道、机器人 - 汇总分享: blog/TG.md
-    - Python:
-        - 将Python文件.py打包成.exe可执行程序: blog/py/python.md
-        - pip: blog/py/pip.md
-    - C语言: blog/c.md
-    - kexueshangwang: blog/kexue.md
+  - 首页: index.md
+  - Blog:
+    - blog/index.md
   - 开发: 
     - Markdown: develop/markdown.md
     - MWeb Pro: develop/MWeb.md
@@ -78,20 +100,19 @@ nav:
 
 
 
-copyright: Copyright &copy; 2022王科文 # 左下角的版权声明
-
+copyright: Copyright &copy; 2023~Now 紫月 # 左下角的版权声明
 
 extra:
-  generator: false  #删除页脚显示“使用 MkDocs 材料制造”
+  #generator: false  #删除页脚显示“使用 MkDocs 材料制造”
   social:
-    - icon: fontawesome/brands/twitter 
-      link: https://twitter.com/wcowin_
     - icon: fontawesome/brands/github
-      link: https://github.com/Wcowin
+      link: https://github.com/PurpleMoon0
     - icon: fontawesome/brands/bilibili
-      link: https://space.bilibili.com/1407028951?spm_id_from=333.1007.0.0
+      link: https://space.bilibili.com/104246503/dynamic
+    - icon: fontawesome/brands/qq
+      link: http://240719280.qzone.qq.com
     - icon: fontawesome/solid/paper-plane
-      link: mailto:<1135801806@qq.com> #联系方式
+      link: mailto:<yjy0214@foxmail.com> #联系方式
 
 #cookie 
   # analytics: 
@@ -121,11 +142,27 @@ extra:
 plugins:
   - search
   - tags  #标签
+  - blog
+  # #- social # 内置的社交插件会自动为每个页面生成自定义预览图像
+  # - social:
+  #     # cards_layout: default/only/image
+  #     cards_layout_options:
+  #       # background_image: layouts/background.png
+  #       font_family: Noto Sans SC # 设置为简体中文
+
+  # git-revision-date-localized 插件增加了对在每个页面底部添加上次更新日期和创建文档的支持。
+  # 详情访问官方文档https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions-edit-this-page
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+
+# Material for MkDocs 支持大量的 Python Markdown 扩展
 markdown_extensions:
-  - abbr
-  - pymdownx.caret
-  - pymdownx.mark
-  - pymdownx.tilde
+  - abbr # 缩写
+  - admonition #标注
+  - attr_list # 属性列表扩展允许使用特殊语法将 HTML 属性和 CSS 类添加到几乎每个 Markdown 内联和块级元素。
+  - def_list # 自定义列表
+  - footnotes # 脚注
   - md_in_html
   - pymdownx.arithmatex:  # latex支持
       generic: true
@@ -135,12 +172,32 @@ markdown_extensions:
       anchor_linenums: true
       # linenums: true # 显示行号
       # auto_title: true # 显示编程语言名称
-  - pymdownx.inlinehilite
+  - pymdownx.inlinehilite # 突出显示内联代码块
+
+  # 用法参考文档：https://squidfunk.github.io/mkdocs-material/reference/formatting/#sub-and-superscripts
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+
+  # 参考：https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets
   - pymdownx.snippets
   - pymdownx.superfences
+
+  # 内容分组
+  # 参考：https://squidfunk.github.io/mkdocs-material/reference/content-tabs/#content-tabs
+  - pymdownx.tabbed:
+      alternate_style: true
+  
+  # 任务列表
+  # 参考：https://squidfunk.github.io/mkdocs-material/reference/lists/#using-task-lists
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
   - attr_list
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.superfences # 代码块高亮插件
   - meta # 支持Markdown文件上方自定义标题标签等
