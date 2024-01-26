@@ -150,8 +150,9 @@ plugins:
   #       # background_image: layouts/background.png
   #       font_family: Noto Sans SC # 设置为简体中文
 
+
   # git-revision-date-localized 插件增加了对在每个页面底部添加上次更新日期和创建文档的支持。
-  # 详情访问官方文档https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions-edit-this-page
+  # 详情访问官方文档https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#revisioning
   - git-revision-date-localized:
       enable_creation_date: true
       type: date
