@@ -1,9 +1,20 @@
-#[Info]
+# Project information 项目信息
 site_name: PurpleMoon's Wiki
 site_url: https://purplemoon0.github.io/PM_WIKI/
 site_author: PurpleMoon
+site_description: >- 
+  紫月的知识库
 
-#[UI]
+# Repository 仓库信息，网站右上角展示
+repo_name: PurpleMoon0/PM_WIKI
+repo_url: https://github.com/PurpleMoon0/PM_WIKI
+edit_uri: edit/main/docs # 托管文档的子文件夹
+
+# Copyright 左下角的版权声明
+copyright: Copyright &copy; 2023~Now 紫月
+
+
+# Configuration 配置
 theme:
   name: material
   palette:
@@ -66,90 +77,27 @@ theme:
 
   language: zh # 一些提示性的文字会变成中文
 
-
   icon: 
-    repo: fontawesome/brands/github #右上角图标
-edit_uri: edit/main/docs # 编辑按钮跳转的链接
-repo_url: https://github.com/PurpleMoon0/PM_WIKI # 右上角点击跳转的链接
-repo_name: PurpleMoon0/PM_WIKI # 右上角的名字
+    repo: fontawesome/brands/github #右上角远程仓库图标
 
-# [Navigtion]
-nav: 
-  - 首页: index.md
-  - Blog:
-    - blog/index.md
-  - 开发: 
-    - Markdown: develop/markdown.md
-    - MWeb Pro: develop/MWeb.md
-    - 大厂们的良心软件～: develop/fenxiang.md
-    - 写给所有 Mac 用户的摸鱼指北: develop/Mac.md
-  - 闲话:
-    - 原神: relax/game.md
-    - 诗文:
-      - 滕王阁序: relax/shiwen/twgx.md
-      - 望江南·超然台作: relax/shiwen/sjcnh.md
-      - 击鼓: relax/shiwen/jg.md
-      - 雨霖铃·秋别: relax/shiwen/yll.md
-  - 旅行: 
-    - 家乡: trip/LH.md
-    - 重庆: trip/travel.md
-  - 关于:
-    - 个人履历: about/geren.md
-    - 网站制作: about/web.md
-
-
-
-
-copyright: Copyright &copy; 2023~Now 紫月 # 左下角的版权声明
-
+# Additional configuration 额外配置
 extra:
   #generator: false  #删除页脚显示“使用 MkDocs 材料制造”
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/PurpleMoon0
     - icon: fontawesome/brands/bilibili
-      link: https://space.bilibili.com/104246503/dynamic
+      link: https://space.bilibili.com/104246503
     - icon: fontawesome/brands/qq
       link: http://240719280.qzone.qq.com
     - icon: fontawesome/solid/paper-plane
       link: mailto:<yjy0214@foxmail.com> #联系方式
 
-#cookie 
-  # analytics: 
-  #   provider: google
-  #   property: !ENV GOOGLE_ANALYTICS_KEY
-  #   feedback:
-  #     title: Was this page helpful?
-  #     ratings:
-  #       - icon: material/heart
-  #         name: This page was helpful
-  #         data: 1
-  #         note: >-
-  #           Thanks for your feedback!
-  #       - icon: material/heart-broken
-  #         name: This page could be improved
-  #         data: 0
-  #         note: >- 
-  #           Thanks for your feedback! Help us improve this page by
-  #           using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
-  # consent:
-  #   title: Cookie consent
-  #   description: >- 
-  #     我们也使用cookies来识别您的重复访问和偏好来衡量我们文档的有效性以及用户是否找到他们要找的东西。
-  #     如果你同意,你可以帮助我们让我们的网站更好~
-    #描述
 
 plugins:
   - search
   - tags  #标签
   - blog
-  # #- social # 内置的社交插件会自动为每个页面生成自定义预览图像
-  # - social:
-  #     # cards_layout: default/only/image
-  #     cards_layout_options:
-  #       # background_image: layouts/background.png
-  #       font_family: Noto Sans SC # 设置为简体中文
-
 
   # git-revision-date-localized 插件增加了对在每个页面底部添加上次更新日期和创建文档的支持。
   # 详情访问官方文档https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#revisioning
@@ -165,6 +113,7 @@ markdown_extensions:
   - def_list # 自定义列表
   - footnotes # 脚注
   - md_in_html
+  - attr_list
   - pymdownx.arithmatex:  # latex支持
       generic: true
   - toc:
@@ -196,10 +145,9 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 
-  - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.superfences # 代码块高亮插件
   - meta # 支持Markdown文件上方自定义标题标签等
 
@@ -210,3 +158,18 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 extra_css:
   - stylesheets/extra.css
+
+
+# Page tree 文件(页面)树
+nav: 
+  - 首页: index.md
+  #- 书籍&乐谱: 
+
+  #- 开发:
+
+  #- 日常: 
+  
+  - 杂谈:
+    - blog/index.md
+  #- 关于:
+
