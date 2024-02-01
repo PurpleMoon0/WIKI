@@ -58,14 +58,14 @@ theme:
     #- navigation.expand #左侧边栏将默认展开所有可折叠的小节，因此用户不必手动打开小节。
     - navigation.path #激活导航路径后，痕迹导航将呈现在每个页面标题上方，这可能会使在屏幕较小的设备上访问文档的用户更容易找到方向。
     - navigation.indexes #启用章节索引页后，文档可以直接附加到章节，这对于提供概述页面特别有用。
+    - navigation.expand # 打开Tab时左侧目录全部展开
     - toc.follow #启用目录的锚点跟随后，侧边栏会自动滚动，以便始终可见。
     - navigation.top # 返回顶部的按钮 在上滑时出现
-
+    - navigation.footer # 底部翻页按键
     - navigation.indexes # 自定义导航
 
     - search.suggest # 搜索建议，搜索输入一些字母时推荐补全整个单词
     - search.highlight # 搜索出的文章关键词加入高亮
-    - navigation.expand # 打开Tab时左侧目录全部展开
     - search.share #搜索分享按钮
 
     - header.autohide # 启用自动隐藏后，当用户滚动超过特定阈值时，标题会自动隐藏，从而为内容留出更多空间
@@ -171,5 +171,5 @@ nav:
   
   - 杂谈:
     - blog/index.md
-  #- 关于:
-
+  - 关于:
+    - about/about.md
