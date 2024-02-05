@@ -28,6 +28,10 @@ hide:
 [杂谈](#){ .md-button .md-button--primary }
 [生活](#){ .md-button .md-button--primary }
 
+>推荐阅读
+
+- [利兹与青鸟：优美内敛的演出艺术](https://purplemoon0.github.io/PM_WIKI/blog/2021/11/07/利兹与青鸟优美内敛的演出艺术/)
+
 你还可以了解更多和联系我
 
 [更多……](https://github.com/PurpleMoon0){ .md-button }
