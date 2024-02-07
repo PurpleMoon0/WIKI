@@ -163,7 +163,7 @@ extra_css:
 # Page tree 文件(页面)树
 nav: 
   - 首页: index.md
-  #- 书籍&乐谱: 
+  - 书籍&乐谱: book/book.md
 
   #- 开发:
 
