@@ -21,7 +21,7 @@ hide:
 这里是收录、整理和分享知识的地方，请随意浏览~
 
 [书籍](./book/book.md){ .md-button .md-button--primary }
-[开发](#){ .md-button .md-button--primary }
+[开发](./development/如何选择开源许可证.md){ .md-button .md-button--primary }
 
 也会分享一些心得
 
@@ -30,7 +30,7 @@ hide:
 
 >推荐阅读
 
-- [利兹与青鸟：优美内敛的演出艺术](./docs/blog/posts/利兹与青鸟.md)
+- [利兹与青鸟：优美内敛的演出艺术](./blog/posts/利兹与青鸟.md)
 
 你还可以了解更多和联系我
 

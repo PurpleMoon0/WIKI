@@ -165,7 +165,8 @@ nav:
   - 首页: index.md
   - 书籍&乐谱: book/book.md
 
-  #- 开发:
+  - 开发:
+    - development/如何选择开源许可证.md
 
   #- 日常: 
   
