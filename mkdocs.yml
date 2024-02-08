@@ -173,3 +173,5 @@ nav:
     - blog/index.md
   - 关于:
     - about/about.md
+    - 写作指南:
+      - about/个人文档排版指南.md
