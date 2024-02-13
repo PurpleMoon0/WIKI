@@ -10,7 +10,7 @@ hide:
 >路为纸，地成册，行做笔，心当墨。
 
 <p>
-<img src="assets/index.jpg" width="500" align="right"/>
+<img src="assets/index.jpg" width="500" hight="200" align="right"/>
 欢迎来到紫月的知识库
 </p>
 

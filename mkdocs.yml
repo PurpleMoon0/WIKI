@@ -163,7 +163,9 @@ extra_css:
 # Page tree 文件(页面)树
 nav: 
   - 首页: index.md
-  - 书籍&乐谱: book/book.md
+  - 书籍&乐谱: 
+    - book/book.md
+    - 朝の光を感じて: book/【谱例】岸部真明_朝の光を感じて.md
 
   - 开发:
     - development/如何选择开源许可证.md
